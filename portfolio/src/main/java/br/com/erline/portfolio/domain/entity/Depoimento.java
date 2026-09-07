@@ -41,6 +41,30 @@ public class Depoimento {
         this.updatedAt = this.createdAt;
     }
 
+    public static Depoimento reconstituir(
+        UUID id,
+        String nome,
+        String comentario,
+        Integer nota,
+        String fotoUrl,
+        StatusDepoimento status,
+        LocalDateTime createdAt,
+        LocalDateTime updatedAt
+    ) {
+        Depoimento depoimento = new Depoimento();
+
+        depoimento.id = id;
+        depoimento.nome = nome;
+        depoimento.comentario = comentario;
+        depoimento.nota = nota;
+        depoimento.fotoUrl = fotoUrl;
+        depoimento.status = status;
+        depoimento.createdAt = createdAt;
+        depoimento.updatedAt = updatedAt;
+
+        return depoimento;
+    }
+
     private void validarNome(String nome) {
         if (nome == null || nome.isBlank()) {
             throw new DomainException("O nome é obrigatório.");
