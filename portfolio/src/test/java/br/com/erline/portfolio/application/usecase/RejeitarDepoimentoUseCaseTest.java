@@ -1,0 +1,76 @@
+package br.com.erline.portfolio.application.usecase;
+
+import br.com.erline.portfolio.application.dto.DepoimentoOutput;
+import br.com.erline.portfolio.domain.entity.Depoimento;
+import br.com.erline.portfolio.domain.enums.StatusDepoimento;
+import br.com.erline.portfolio.domain.exception.DomainException;
+import br.com.erline.portfolio.domain.repository.DepoimentoRepository;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
+
+import java.util.Optional;
+import java.util.UUID;
+
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
+import static org.mockito.Mockito.*;
+
+@ExtendWith(MockitoExtension.class)
+class RejeitarDepoimentoUseCaseTest {
+
+    @Mock
+    private DepoimentoRepository depoimentoRepository;
+
+    private RejeitarDepoimentoUseCase useCase;
+
+    @BeforeEach
+    void setUp() {
+        useCase = new RejeitarDepoimentoUseCase(depoimentoRepository);
+    }
+
+    @Test
+    void deveRejeitarDepoimentoComSucesso() {
+
+        Depoimento depoimento = new Depoimento(
+                "Maria",
+                "Excelente profissional!",
+                5,
+                null
+        );
+
+        UUID id = depoimento.getId();
+
+        when(depoimentoRepository.findById(id))
+                .thenReturn(Optional.of(depoimento));
+
+        when(depoimentoRepository.save(depoimento))
+                .thenReturn(depoimento);
+
+        DepoimentoOutput output = useCase.execute(id);
+
+        assertThat(output.status())
+                .isEqualTo(StatusDepoimento.REJEITADO);
+
+        verify(depoimentoRepository).findById(id);
+        verify(depoimentoRepository).save(depoimento);
+    }
+
+    @Test
+    void deveLancarExcecaoQuandoDepoimentoNaoExistir() {
+
+        UUID id = UUID.randomUUID();
+
+        when(depoimentoRepository.findById(id))
+                .thenReturn(Optional.empty());
+
+        assertThatThrownBy(() -> useCase.execute(id))
+                .isInstanceOf(DomainException.class)
+                .hasMessage("Depoimento não encontrado.");
+
+        verify(depoimentoRepository).findById(id);
+        verify(depoimentoRepository, never()).save(any());
+    }
+}
