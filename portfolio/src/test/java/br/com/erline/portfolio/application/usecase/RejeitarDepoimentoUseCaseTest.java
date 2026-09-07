@@ -3,7 +3,7 @@ package br.com.erline.portfolio.application.usecase;
 import br.com.erline.portfolio.application.dto.DepoimentoOutput;
 import br.com.erline.portfolio.domain.entity.Depoimento;
 import br.com.erline.portfolio.domain.enums.StatusDepoimento;
-import br.com.erline.portfolio.domain.exception.DomainException;
+import br.com.erline.portfolio.domain.exception.DepoimentoNotFoundException;
 import br.com.erline.portfolio.domain.repository.DepoimentoRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -16,6 +16,7 @@ import java.util.UUID;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
+import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
@@ -67,8 +68,8 @@ class RejeitarDepoimentoUseCaseTest {
                 .thenReturn(Optional.empty());
 
         assertThatThrownBy(() -> useCase.execute(id))
-                .isInstanceOf(DomainException.class)
-                .hasMessage("Depoimento não encontrado.");
+                .isInstanceOf(DepoimentoNotFoundException.class)
+                .hasMessage("Depoimento não encontrado: " + id);
 
         verify(depoimentoRepository).findById(id);
         verify(depoimentoRepository, never()).save(any());
