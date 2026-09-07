@@ -27,4 +27,5 @@ jobs:
           cache: maven
 
       - name: Build and Test
+        working-directory: portfolio
         run: mvn clean test
