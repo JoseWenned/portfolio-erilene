@@ -82,4 +82,5 @@ Se a aplicacao estiver na porta 8081, use essa porta nas URLs acima. O arquivo
 - [Arquitetura](docs/architecture/overview.md)
 - [API REST](docs/api.md)
 - [Operacao e desenvolvimento](docs/development.md)
+- [Deploy gratuito no Render](docs/deploy-render.md)
 - [Uso de LLMs e sessoes](docs/llm/sessions.md)
