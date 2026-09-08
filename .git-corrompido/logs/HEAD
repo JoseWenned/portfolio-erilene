@@ -1,0 +1,64 @@
+0000000000000000000000000000000000000000 caef7ece1b9fd5aabadfaa7aa263670cff4a1872 José Wenned <wennedchaves1997@gmail.com> 1788785407 -0300	commit (initial): chore: initialize Erline portfolio backend
+caef7ece1b9fd5aabadfaa7aa263670cff4a1872 caef7ece1b9fd5aabadfaa7aa263670cff4a1872 José Wenned <wennedchaves1997@gmail.com> 1788785419 -0300	checkout: moving from main to feature/domain-depoimento
+caef7ece1b9fd5aabadfaa7aa263670cff4a1872 fac0f4f23b3016517f820981f85da73ff6c0cc9b José Wenned <wennedchaves1997@gmail.com> 1788786379 -0300	commit: feat: implement depoimento domain
+fac0f4f23b3016517f820981f85da73ff6c0cc9b caef7ece1b9fd5aabadfaa7aa263670cff4a1872 José Wenned <wennedchaves1997@gmail.com> 1788786482 -0300	checkout: moving from feature/domain-depoimento to main
+caef7ece1b9fd5aabadfaa7aa263670cff4a1872 fac0f4f23b3016517f820981f85da73ff6c0cc9b José Wenned <wennedchaves1997@gmail.com> 1788786531 -0300	checkout: moving from main to feature/domain-depoimento
+fac0f4f23b3016517f820981f85da73ff6c0cc9b caef7ece1b9fd5aabadfaa7aa263670cff4a1872 José Wenned <wennedchaves1997@gmail.com> 1788786698 -0300	checkout: moving from feature/domain-depoimento to main
+caef7ece1b9fd5aabadfaa7aa263670cff4a1872 fc147ed732d4bee1ea2798b567ecf28ac0ec4930 José Wenned <wennedchaves1997@gmail.com> 1788786705 -0300	pull origin main: Fast-forward
+fc147ed732d4bee1ea2798b567ecf28ac0ec4930 fc147ed732d4bee1ea2798b567ecf28ac0ec4930 José Wenned <wennedchaves1997@gmail.com> 1788786718 -0300	checkout: moving from main to feature/devops
+fc147ed732d4bee1ea2798b567ecf28ac0ec4930 84e6f8a81026c3fa1925a38f2008d0aeb64f3d21 José Wenned <wennedchaves1997@gmail.com> 1788786996 -0300	commit: ci: add GitHub Actions pipeline
+84e6f8a81026c3fa1925a38f2008d0aeb64f3d21 28e59b1713d1da53d2fb1d0a861029b21acd5359 José Wenned <wennedchaves1997@gmail.com> 1788787238 -0300	commit: fix: configure maven working directory
+28e59b1713d1da53d2fb1d0a861029b21acd5359 65bdcea2eb8f51c2eabed61e744b28f05108a516 José Wenned <wennedchaves1997@gmail.com> 1788787679 -0300	commit: ci: add postgres service
+65bdcea2eb8f51c2eabed61e744b28f05108a516 fc147ed732d4bee1ea2798b567ecf28ac0ec4930 José Wenned <wennedchaves1997@gmail.com> 1788789199 -0300	checkout: moving from feature/devops to main
+fc147ed732d4bee1ea2798b567ecf28ac0ec4930 f9579ab954ed425db6a177650a81c90fc5424ef5 José Wenned <wennedchaves1997@gmail.com> 1788789207 -0300	pull origin main: Fast-forward
+f9579ab954ed425db6a177650a81c90fc5424ef5 f9579ab954ed425db6a177650a81c90fc5424ef5 José Wenned <wennedchaves1997@gmail.com> 1788789293 -0300	checkout: moving from main to feature/application-depoimento
+f9579ab954ed425db6a177650a81c90fc5424ef5 8bb4c770520fa1c9a4c7e153bbcbcf36e4e9f1df José Wenned <wennedchaves1997@gmail.com> 1788808702 -0300	commit: feat: implement application layer for testimonials
+8bb4c770520fa1c9a4c7e153bbcbcf36e4e9f1df 3e4b6e1c2c56d815e733b1d2bbfd7688cfa7fb80 José Wenned <wennedchaves1997@gmail.com> 1788809025 -0300	commit: feat: define depoimento repository contract
+3e4b6e1c2c56d815e733b1d2bbfd7688cfa7fb80 f9579ab954ed425db6a177650a81c90fc5424ef5 José Wenned <wennedchaves1997@gmail.com> 1788812716 -0300	checkout: moving from feature/application-depoimento to main
+f9579ab954ed425db6a177650a81c90fc5424ef5 839bbe33ffbce96124458d82f0092cc30ebfc1ed José Wenned <wennedchaves1997@gmail.com> 1788812762 -0300	pull origin main: Fast-forward
+839bbe33ffbce96124458d82f0092cc30ebfc1ed 839bbe33ffbce96124458d82f0092cc30ebfc1ed José Wenned <wennedchaves1997@gmail.com> 1788812858 -0300	checkout: moving from main to feature/infrastructure-persistence
+839bbe33ffbce96124458d82f0092cc30ebfc1ed a06d9cb87f4ba9019576b9daf54e9b2a5b8f0baf José Wenned <wennedchaves1997@gmail.com> 1788814568 -0300	commit: feat: implement depoimento persistence
+a06d9cb87f4ba9019576b9daf54e9b2a5b8f0baf 839bbe33ffbce96124458d82f0092cc30ebfc1ed José Wenned <wennedchaves1997@gmail.com> 1788814761 -0300	checkout: moving from feature/infrastructure-persistence to main
+839bbe33ffbce96124458d82f0092cc30ebfc1ed 186209e090fce5be828c77ed0b291de75d16e703 José Wenned <wennedchaves1997@gmail.com> 1788814804 -0300	pull origin main: Fast-forward
+186209e090fce5be828c77ed0b291de75d16e703 186209e090fce5be828c77ed0b291de75d16e703 José Wenned <wennedchaves1997@gmail.com> 1788814877 -0300	checkout: moving from main to feature/api-depoimento
+186209e090fce5be828c77ed0b291de75d16e703 48e6b7ea80c042fcd469d15a672dd6f621686688 José Wenned <wennedchaves1997@gmail.com> 1788816179 -0300	commit: feat: implement depoimento REST API
+48e6b7ea80c042fcd469d15a672dd6f621686688 186209e090fce5be828c77ed0b291de75d16e703 José Wenned <wennedchaves1997@gmail.com> 1788816444 -0300	checkout: moving from feature/api-depoimento to main
+186209e090fce5be828c77ed0b291de75d16e703 2529996a22c03db2c744ca8eb2aa282025349061 José Wenned <wennedchaves1997@gmail.com> 1788816452 -0300	pull origin main: Fast-forward
+2529996a22c03db2c744ca8eb2aa282025349061 2529996a22c03db2c744ca8eb2aa282025349061 José Wenned <wennedchaves1997@gmail.com> 1788816468 -0300	checkout: moving from main to feature/tests-integration
+2529996a22c03db2c744ca8eb2aa282025349061 c24b740788e6d6b84eedd502bcc351af7fbb76ec José Wenned <wennedchaves1997@gmail.com> 1788828934 -0300	commit: test: adicionar testes de integração com Testcontainers
+c24b740788e6d6b84eedd502bcc351af7fbb76ec 2529996a22c03db2c744ca8eb2aa282025349061 José Wenned <wennedchaves1997@gmail.com> 1788829225 -0300	checkout: moving from feature/tests-integration to main
+2529996a22c03db2c744ca8eb2aa282025349061 eb96cff623aa0b5f56059176050cf838fb69fdf2 José Wenned <wennedchaves1997@gmail.com> 1788829234 -0300	pull origin main: Fast-forward
+eb96cff623aa0b5f56059176050cf838fb69fdf2 eb96cff623aa0b5f56059176050cf838fb69fdf2 José Wenned <wennedchaves1997@gmail.com> 1788831355 -0300	checkout: moving from main to feature/security-admin
+eb96cff623aa0b5f56059176050cf838fb69fdf2 ab0f4e6739f811c9c24f3ba392aa8ce7f749c740 José Wenned <wennedchaves1997@gmail.com> 1788833160 -0300	commit: feat: implement admin security foundation
+ab0f4e6739f811c9c24f3ba392aa8ce7f749c740 eb96cff623aa0b5f56059176050cf838fb69fdf2 José Wenned <wennedchaves1997@gmail.com> 1788835331 -0300	checkout: moving from feature/security-admin to main
+eb96cff623aa0b5f56059176050cf838fb69fdf2 ad44cfb66b14462dcb135d98fff9ba9edb1ba886 José Wenned <wennedchaves1997@gmail.com> 1788835342 -0300	pull origin main: Fast-forward
+ad44cfb66b14462dcb135d98fff9ba9edb1ba886 a06d9cb87f4ba9019576b9daf54e9b2a5b8f0baf José Wenned <wennedchaves1997@gmail.com> 1788835387 -0300	checkout: moving from main to feature/infrastructure-persistence
+a06d9cb87f4ba9019576b9daf54e9b2a5b8f0baf ad44cfb66b14462dcb135d98fff9ba9edb1ba886 José Wenned <wennedchaves1997@gmail.com> 1788835411 -0300	pull origin main: Fast-forward
+ad44cfb66b14462dcb135d98fff9ba9edb1ba886 46f263cf7221fa263e89822175cb52b2882ab6e4 José Wenned <wennedchaves1997@gmail.com> 1788835735 -0300	commit: test: cover usuario repository persistence
+46f263cf7221fa263e89822175cb52b2882ab6e4 ad44cfb66b14462dcb135d98fff9ba9edb1ba886 José Wenned <wennedchaves1997@gmail.com> 1788835933 -0300	checkout: moving from feature/infrastructure-persistence to main
+ad44cfb66b14462dcb135d98fff9ba9edb1ba886 7187e1a9dc84354271d9551fb02b2409c0b344b2 José Wenned <wennedchaves1997@gmail.com> 1788835941 -0300	pull origin main: Fast-forward
+7187e1a9dc84354271d9551fb02b2409c0b344b2 3e4b6e1c2c56d815e733b1d2bbfd7688cfa7fb80 José Wenned <wennedchaves1997@gmail.com> 1788836117 -0300	checkout: moving from main to feature/application-depoimento
+3e4b6e1c2c56d815e733b1d2bbfd7688cfa7fb80 7187e1a9dc84354271d9551fb02b2409c0b344b2 José Wenned <wennedchaves1997@gmail.com> 1788836133 -0300	pull origin main: Fast-forward
+7187e1a9dc84354271d9551fb02b2409c0b344b2 6a2a1b5a213e22d9b5e900d56a83b85aba6cee64 José Wenned <wennedchaves1997@gmail.com> 1788836965 -0300	commit: feat: add usuario creation use case
+6a2a1b5a213e22d9b5e900d56a83b85aba6cee64 7187e1a9dc84354271d9551fb02b2409c0b344b2 José Wenned <wennedchaves1997@gmail.com> 1788837004 -0300	checkout: moving from feature/application-depoimento to main
+7187e1a9dc84354271d9551fb02b2409c0b344b2 a462faef24a3a4bb3b605efee5020caa9f5c6c4b José Wenned <wennedchaves1997@gmail.com> 1788837631 -0300	pull origin main: Fast-forward
+a462faef24a3a4bb3b605efee5020caa9f5c6c4b a462faef24a3a4bb3b605efee5020caa9f5c6c4b José Wenned <wennedchaves1997@gmail.com> 1788843522 -0300	checkout: moving from main to feature/tests-api-depoimento
+a462faef24a3a4bb3b605efee5020caa9f5c6c4b 3d002c61b5818397e9f00d57e6902eaa50584734 José Wenned <wennedchaves1997@gmail.com> 1788845319 -0300	commit: feat: add admin user API and OpenAPI docs
+3d002c61b5818397e9f00d57e6902eaa50584734 a462faef24a3a4bb3b605efee5020caa9f5c6c4b José Wenned <wennedchaves1997@gmail.com> 1788845430 -0300	checkout: moving from feature/tests-api-depoimento to main
+a462faef24a3a4bb3b605efee5020caa9f5c6c4b f8d78e5c893147c43b7edce1df025f0bc5ba1e87 José Wenned <wennedchaves1997@gmail.com> 1788845447 -0300	pull origin main: Fast-forward
+f8d78e5c893147c43b7edce1df025f0bc5ba1e87 65bdcea2eb8f51c2eabed61e744b28f05108a516 José Wenned <wennedchaves1997@gmail.com> 1788845463 -0300	checkout: moving from main to feature/devops
+65bdcea2eb8f51c2eabed61e744b28f05108a516 f8d78e5c893147c43b7edce1df025f0bc5ba1e87 José Wenned <wennedchaves1997@gmail.com> 1788845472 -0300	pull origin main: Fast-forward
+f8d78e5c893147c43b7edce1df025f0bc5ba1e87 54c9a24970adae566c64d45924fa4a5461e4f5a2 José Wenned <wennedchaves1997@gmail.com> 1788846289 -0300	commit: docs: add project and llm session guides
+54c9a24970adae566c64d45924fa4a5461e4f5a2 f8d78e5c893147c43b7edce1df025f0bc5ba1e87 José Wenned <wennedchaves1997@gmail.com> 1788846625 -0300	checkout: moving from feature/devops to main
+f8d78e5c893147c43b7edce1df025f0bc5ba1e87 2d71f5474fedf1df3787a9a00d0304471c35b79f José Wenned <wennedchaves1997@gmail.com> 1788846634 -0300	pull origin main: Fast-forward
+2d71f5474fedf1df3787a9a00d0304471c35b79f 2d71f5474fedf1df3787a9a00d0304471c35b79f José Wenned <wennedchaves1997@gmail.com> 1788846725 -0300	checkout: moving from main to feature/deploy-render
+2d71f5474fedf1df3787a9a00d0304471c35b79f aa00f54c1249389b24aee277b438e9440d5a0cda José Wenned <wennedchaves1997@gmail.com> 1788847687 -0300	commit: chore: prepare render deployment
+aa00f54c1249389b24aee277b438e9440d5a0cda 2d71f5474fedf1df3787a9a00d0304471c35b79f José Wenned <wennedchaves1997@gmail.com> 1788847770 -0300	checkout: moving from feature/deploy-render to main
+2d71f5474fedf1df3787a9a00d0304471c35b79f ecaac754595c6424a013c4263c97082f03ce2312 José Wenned <wennedchaves1997@gmail.com> 1788847861 -0300	pull origin main: Fast-forward
+ecaac754595c6424a013c4263c97082f03ce2312 aa00f54c1249389b24aee277b438e9440d5a0cda José Wenned <wennedchaves1997@gmail.com> 1788848956 -0300	checkout: moving from main to feature/deploy-render
+aa00f54c1249389b24aee277b438e9440d5a0cda ecaac754595c6424a013c4263c97082f03ce2312 José Wenned <wennedchaves1997@gmail.com> 1788848965 -0300	pull origin main: Fast-forward
+ecaac754595c6424a013c4263c97082f03ce2312 f1c14a9e9fc3cca070bc823f413051e5017900dc José Wenned <wennedchaves1997@gmail.com> 1788886886 -0300	commit: chore: configurar datasource para deploy no Render
+f1c14a9e9fc3cca070bc823f413051e5017900dc ecaac754595c6424a013c4263c97082f03ce2312 José Wenned <wennedchaves1997@gmail.com> 1788887305 -0300	checkout: moving from feature/deploy-render to main
+ecaac754595c6424a013c4263c97082f03ce2312 f0bf2f08e887aebf92c7770644fb33f4b79b0dd9 José Wenned <wennedchaves1997@gmail.com> 1788887314 -0300	pull origin main: Fast-forward
+f0bf2f08e887aebf92c7770644fb33f4b79b0dd9 f1c14a9e9fc3cca070bc823f413051e5017900dc José Wenned <wennedchaves1997@gmail.com> 1788889173 -0300	checkout: moving from main to feature/deploy-render
+                                                                                                                                                                                                     

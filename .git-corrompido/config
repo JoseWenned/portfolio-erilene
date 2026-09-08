@@ -1,0 +1,35 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[remote "origin"]
+	url = git@github.com:JoseWenned/portfolio-erilene.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "main"]
+	remote = origin
+	merge = refs/heads/main
+[branch "feature/domain-depoimento"]
+	vscode-merge-base = origin/main
+[branch "feature/devops"]
+	vscode-merge-base = origin/main
+	remote = origin
+	merge = refs/heads/feature/devops
+[branch "feature/application-depoimento"]
+	vscode-merge-base = origin/main
+[branch "feature/infrastructure-persistence"]
+	vscode-merge-base = origin/main
+[branch "feature/api-depoimento"]
+	vscode-merge-base = origin/main
+[branch "feature/tests-integration"]
+	vscode-merge-base = origin/main
+	remote = origin
+	merge = refs/heads/feature/tests-integration
+[branch "feature/security-admin"]
+	vscode-merge-base = origin/main
+[branch "feature/tests-api-depoimento"]
+	vscode-merge-base = origin/main
+[branch "feature/deploy-render"]
+	vscode-merge-base = origin/main
+	remote = origin
+	merge = refs/heads/feature/deploy-render

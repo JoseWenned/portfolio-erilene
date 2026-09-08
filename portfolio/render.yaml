@@ -4,6 +4,8 @@ services:
     runtime: docker
     plan: free
     healthCheckPath: /actuator/health
+    dockerfilePath: ./portfolio/Dockerfile
+    dockerContext: ./portfolio
     envVars:
     - key: SPRING_DATASOURCE_HOST
       fromDatabase:
