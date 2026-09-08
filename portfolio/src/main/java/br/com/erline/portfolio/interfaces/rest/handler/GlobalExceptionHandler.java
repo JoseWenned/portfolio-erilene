@@ -2,6 +2,7 @@ package br.com.erline.portfolio.interfaces.rest.handler;
 
 import br.com.erline.portfolio.domain.exception.DepoimentoNotFoundException;
 import br.com.erline.portfolio.domain.exception.DomainException;
+import br.com.erline.portfolio.domain.exception.UsuarioAlreadyExistsException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.MethodArgumentNotValidException;
@@ -77,6 +78,23 @@ public class GlobalExceptionHandler {
 
         return ResponseEntity
                 .status(HttpStatus.NOT_FOUND)
+                .body(response);
+    }
+
+    @ExceptionHandler(UsuarioAlreadyExistsException.class)
+    public ResponseEntity<ErrorResponse> handleUsuarioAlreadyExists(
+            UsuarioAlreadyExistsException exception
+    ) {
+        ErrorResponse response = new ErrorResponse(
+                HttpStatus.CONFLICT.value(),
+                "Conflito",
+                exception.getMessage(),
+                LocalDateTime.now(),
+                null
+        );
+
+        return ResponseEntity
+                .status(HttpStatus.CONFLICT)
                 .body(response);
     }
 }
