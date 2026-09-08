@@ -22,10 +22,14 @@ public class SecurityConfig {
                 .sessionManagement(session -> session
                         .sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(authorize -> authorize
+                        .requestMatchers("/v3/api-docs/**", "/swagger-ui/**", "/swagger-ui.html")
+                        .permitAll()
                         .requestMatchers(HttpMethod.GET, "/api/depoimentos/**")
                         .permitAll()
                         .requestMatchers(HttpMethod.POST, "/api/depoimentos")
                         .permitAll()
+                        .requestMatchers(HttpMethod.POST, "/api/usuarios")
+                        .hasRole("ADMIN")
                         .requestMatchers(HttpMethod.PATCH, "/api/depoimentos/**")
                         .hasRole("ADMIN")
                         .anyRequest()

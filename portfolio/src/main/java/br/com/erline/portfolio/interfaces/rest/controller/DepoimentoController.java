@@ -8,6 +8,9 @@ import br.com.erline.portfolio.application.usecase.RejeitarDepoimentoUseCase;
 import br.com.erline.portfolio.interfaces.rest.dto.request.CriarDepoimentoRequest;
 import br.com.erline.portfolio.interfaces.rest.dto.response.DepoimentoResponse;
 import jakarta.validation.Valid;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -17,6 +20,7 @@ import java.util.UUID;
 
 @RestController
 @RequestMapping("/api/depoimentos")
+@Tag(name = "Depoimentos", description = "Recebimento e moderação de depoimentos")
 public class DepoimentoController {
 
     private final CriarDepoimentoUseCase criarDepoimentoUseCase;
@@ -37,6 +41,7 @@ public class DepoimentoController {
     }
 
     @PostMapping
+    @Operation(summary = "Criar depoimento", description = "Recebe um depoimento para análise.")
     public ResponseEntity<DepoimentoResponse> criar(
             @Valid @RequestBody CriarDepoimentoRequest request
     ) {
@@ -56,6 +61,7 @@ public class DepoimentoController {
     }
 
     @GetMapping
+    @Operation(summary = "Listar depoimentos aprovados")
     public ResponseEntity<List<DepoimentoResponse>> listar() {
         List<DepoimentoResponse> response =
             listarDepoimentosUseCase.execute()
@@ -67,6 +73,8 @@ public class DepoimentoController {
     }
 
     @PatchMapping("/{id}/aprovar")
+    @Operation(summary = "Aprovar depoimento")
+    @SecurityRequirement(name = "basicAuth")
     public ResponseEntity<DepoimentoResponse> aprovar(
             @PathVariable UUID id
     ) {
@@ -79,6 +87,8 @@ public class DepoimentoController {
     }
 
     @PatchMapping("/{id}/rejeitar")
+    @Operation(summary = "Rejeitar depoimento")
+    @SecurityRequirement(name = "basicAuth")
     public ResponseEntity<DepoimentoResponse> rejeitar(
         @PathVariable UUID id
     ) {

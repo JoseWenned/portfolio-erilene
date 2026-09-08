@@ -1,0 +1,51 @@
+@baseUrl = http://localhost:8081
+@adminEmail = admin@portfolio.test
+@adminPassword = admin-password
+
+### Criar depoimento
+# @name criarDepoimento
+POST {{baseUrl}}/api/depoimentos
+Content-Type: application/json
+
+{
+  "nome": "Maria",
+  "comentario": "Excelente profissional!",
+  "nota": 5,
+  "fotoUrl": "https://example.com/maria.jpg"
+}
+
+### Listar depoimentos aprovados
+GET {{baseUrl}}/api/depoimentos
+Accept: application/json
+
+### Aprovar depoimento criado acima
+@depoimentoId = {{criarDepoimento.response.body.$.id}}
+PATCH {{baseUrl}}/api/depoimentos/{{depoimentoId}}/aprovar
+Authorization: Basic {{adminEmail}}:{{adminPassword}}
+Accept: application/json
+
+### Rejeitar depoimento
+PATCH {{baseUrl}}/api/depoimentos/{{depoimentoId}}/rejeitar
+Authorization: Basic {{adminEmail}}:{{adminPassword}}
+Accept: application/json
+
+### Criar usuário administrador
+POST {{baseUrl}}/api/usuarios
+Authorization: Basic {{adminEmail}}:{{adminPassword}}
+Content-Type: application/json
+
+{
+  "email": "novo-admin@portfolio.test",
+  "senha": "senha-segura",
+  "role": "ADMIN"
+}
+
+### Exemplo de validação inválida
+POST {{baseUrl}}/api/depoimentos
+Content-Type: application/json
+
+{
+  "nome": "",
+  "comentario": "",
+  "nota": 6
+}
