@@ -6,37 +6,38 @@ services:
     healthCheckPath: /actuator/health
     dockerfilePath: ./portfolio/Dockerfile
     dockerContext: ./portfolio
+
     envVars:
-    - key: SPRING_DATASOURCE_HOST
-      fromDatabase:
-        name: portfolio-erline-db
-        property: host
+      - key: SPRING_DATASOURCE_HOST
+        fromDatabase:
+          name: portfolio-erline-db
+          property: host
 
-    - key: SPRING_DATASOURCE_PORT
-      fromDatabase:
-        name: portfolio-erline-db
-        property: port
+      - key: SPRING_DATASOURCE_PORT
+        fromDatabase:
+          name: portfolio-erline-db
+          property: port
 
-    - key: SPRING_DATASOURCE_DB
-      fromDatabase:
-        name: portfolio-erline-db
-        property: database
+      - key: SPRING_DATASOURCE_DB
+        fromDatabase:
+          name: portfolio-erline-db
+          property: database
 
-    - key: SPRING_DATASOURCE_USERNAME
-      fromDatabase:
-        name: portfolio-erline-db
-        property: user
+      - key: SPRING_DATASOURCE_USERNAME
+        fromDatabase:
+          name: portfolio-erline-db
+          property: user
 
-    - key: SPRING_DATASOURCE_PASSWORD
-      fromDatabase:
-        name: portfolio-erline-db
-        property: password
+      - key: SPRING_DATASOURCE_PASSWORD
+        fromDatabase:
+          name: portfolio-erline-db
+          property: password
 
-    - key: PORTFOLIO_SECURITY_ADMIN_EMAIL
-      sync: false
+      - key: PORTFOLIO_SECURITY_ADMIN_EMAIL
+        sync: false
 
-    - key: PORTFOLIO_SECURITY_ADMIN_PASSWORD
-      sync: false
+      - key: PORTFOLIO_SECURITY_ADMIN_PASSWORD
+        sync: false
 
 databases:
   - name: portfolio-erline-db
