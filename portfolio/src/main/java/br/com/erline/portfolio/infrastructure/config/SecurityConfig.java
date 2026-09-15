@@ -43,37 +43,21 @@ public class SecurityConfig {
                                 "/actuator/health"
                         )
                         .permitAll()
-
-                        .requestMatchers(
-                                HttpMethod.GET,
-                                "/uploads/depoimentos/**"
-                        )
-                        .permitAll()
-
-                        .requestMatchers(
-                                HttpMethod.POST,
-                                "/api/uploads/imagem"
-                        )
-                        .permitAll()
-
                         .requestMatchers(
                                 HttpMethod.GET,
                                 "/api/depoimentos/**"
                         )
                         .permitAll()
-
                         .requestMatchers(
                                 HttpMethod.POST,
                                 "/api/depoimentos"
                         )
                         .permitAll()
-
                         .requestMatchers(
                                 HttpMethod.POST,
                                 "/api/usuarios"
                         )
                         .hasRole("ADMIN")
-
                         .requestMatchers(
                                 HttpMethod.PATCH,
                                 "/api/depoimentos/**"
@@ -91,14 +75,14 @@ public class SecurityConfig {
 
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
-        CorsConfiguration configuration =
-                new CorsConfiguration();
+        CorsConfiguration configuration = new CorsConfiguration();
 
         configuration.setAllowedOrigins(
                 List.of(
                         "http://localhost:3000",
                         "http://127.0.0.1:3000"
                 )
+                
         );
 
         configuration.setAllowedMethods(
