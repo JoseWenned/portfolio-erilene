@@ -1,0 +1,4 @@
+0000000000000000000000000000000000000000 839bbe33ffbce96124458d82f0092cc30ebfc1ed José Wenned <wennedchaves1997@gmail.com> 1788812858 -0300	branch: Created from HEAD
+839bbe33ffbce96124458d82f0092cc30ebfc1ed a06d9cb87f4ba9019576b9daf54e9b2a5b8f0baf José Wenned <wennedchaves1997@gmail.com> 1788814568 -0300	commit: feat: implement depoimento persistence
+a06d9cb87f4ba9019576b9daf54e9b2a5b8f0baf ad44cfb66b14462dcb135d98fff9ba9edb1ba886 José Wenned <wennedchaves1997@gmail.com> 1788835411 -0300	pull origin main: Fast-forward
+ad44cfb66b14462dcb135d98fff9ba9edb1ba886 46f263cf7221fa263e89822175cb52b2882ab6e4 José Wenned <wennedchaves1997@gmail.com> 1788835735 -0300	commit: test: cover usuario repository persistence

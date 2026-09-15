@@ -20,13 +20,17 @@ import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 public class SecurityConfig {
 
     @Bean
-    public SecurityFilterChain securityFilterChain(HttpSecurity http)
-            throws Exception {
+    public SecurityFilterChain securityFilterChain(
+            HttpSecurity http
+    ) throws Exception {
+
         http
                 .cors(cors -> {})
                 .csrf(csrf -> csrf.disable())
                 .sessionManagement(session -> session
-                        .sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+                        .sessionCreationPolicy(
+                                SessionCreationPolicy.STATELESS
+                        ))
                 .authorizeHttpRequests(authorize -> authorize
                         .requestMatchers(
                                 "/v3/api-docs/**",
@@ -34,7 +38,10 @@ public class SecurityConfig {
                                 "/swagger-ui.html"
                         )
                         .permitAll()
-                        .requestMatchers("/actuator/health")
+
+                        .requestMatchers(
+                                "/actuator/health"
+                        )
                         .permitAll()
                         .requestMatchers(
                                 HttpMethod.GET,
@@ -56,9 +63,12 @@ public class SecurityConfig {
                                 "/api/depoimentos/**"
                         )
                         .hasRole("ADMIN")
+
                         .anyRequest()
-                        .authenticated())
-                .httpBasic(basic -> basic.realmName("portfolio"));
+                        .authenticated()
+                )
+                .httpBasic(basic -> basic
+                        .realmName("portfolio"));
 
         return http.build();
     }

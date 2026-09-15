@@ -1,0 +1,6 @@
+0000000000000000000000000000000000000000 fc147ed732d4bee1ea2798b567ecf28ac0ec4930 José Wenned <wennedchaves1997@gmail.com> 1788786718 -0300	branch: Created from HEAD
+fc147ed732d4bee1ea2798b567ecf28ac0ec4930 84e6f8a81026c3fa1925a38f2008d0aeb64f3d21 José Wenned <wennedchaves1997@gmail.com> 1788786996 -0300	commit: ci: add GitHub Actions pipeline
+84e6f8a81026c3fa1925a38f2008d0aeb64f3d21 28e59b1713d1da53d2fb1d0a861029b21acd5359 José Wenned <wennedchaves1997@gmail.com> 1788787238 -0300	commit: fix: configure maven working directory
+28e59b1713d1da53d2fb1d0a861029b21acd5359 65bdcea2eb8f51c2eabed61e744b28f05108a516 José Wenned <wennedchaves1997@gmail.com> 1788787679 -0300	commit: ci: add postgres service
+65bdcea2eb8f51c2eabed61e744b28f05108a516 f8d78e5c893147c43b7edce1df025f0bc5ba1e87 José Wenned <wennedchaves1997@gmail.com> 1788845472 -0300	pull origin main: Fast-forward
+f8d78e5c893147c43b7edce1df025f0bc5ba1e87 54c9a24970adae566c64d45924fa4a5461e4f5a2 José Wenned <wennedchaves1997@gmail.com> 1788846289 -0300	commit: docs: add project and llm session guides
