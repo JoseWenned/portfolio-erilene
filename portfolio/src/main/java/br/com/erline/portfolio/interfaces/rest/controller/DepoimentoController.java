@@ -3,6 +3,7 @@ package br.com.erline.portfolio.interfaces.rest.controller;
 import br.com.erline.portfolio.application.dto.DepoimentoOutput;
 import br.com.erline.portfolio.application.usecase.AprovarDepoimentoUseCase;
 import br.com.erline.portfolio.application.usecase.CriarDepoimentoUseCase;
+import br.com.erline.portfolio.application.usecase.ListarDepoimentosPendentesUseCase;
 import br.com.erline.portfolio.application.usecase.ListarDepoimentosUseCase;
 import br.com.erline.portfolio.application.usecase.RejeitarDepoimentoUseCase;
 import br.com.erline.portfolio.interfaces.rest.dto.request.CriarDepoimentoRequest;
@@ -27,17 +28,20 @@ public class DepoimentoController {
     private final ListarDepoimentosUseCase listarDepoimentosUseCase;
     private final AprovarDepoimentoUseCase aprovarDepoimentoUseCase;
     private final RejeitarDepoimentoUseCase rejeitarDepoimentoUseCase;
+    private final ListarDepoimentosPendentesUseCase listarDepoimentosPendentesUseCase;
 
     public DepoimentoController(
-            CriarDepoimentoUseCase criarDepoimentoUseCase,
-            ListarDepoimentosUseCase listarDepoimentosUseCase,
-            AprovarDepoimentoUseCase aprovarDepoimentoUseCase,
-            RejeitarDepoimentoUseCase rejeitarDepoimentoUseCase
+        CriarDepoimentoUseCase criarDepoimentoUseCase,
+        ListarDepoimentosUseCase listarDepoimentosUseCase,
+        AprovarDepoimentoUseCase aprovarDepoimentoUseCase,
+        RejeitarDepoimentoUseCase rejeitarDepoimentoUseCase,
+        ListarDepoimentosPendentesUseCase listarDepoimentosPendentesUseCase
     ) {
         this.criarDepoimentoUseCase = criarDepoimentoUseCase;
         this.listarDepoimentosUseCase = listarDepoimentosUseCase;
         this.aprovarDepoimentoUseCase = aprovarDepoimentoUseCase;
         this.rejeitarDepoimentoUseCase = rejeitarDepoimentoUseCase;
+        this.listarDepoimentosPendentesUseCase = listarDepoimentosPendentesUseCase;
     }
 
     @PostMapping
@@ -70,6 +74,15 @@ public class DepoimentoController {
                 .toList();
 
         return ResponseEntity.ok(response);
+    }
+
+    @GetMapping("/pendentes") 
+    @Operation(summary = "Listar depoimentos pendentes") 
+    @SecurityRequirement(name = "basicAuth") 
+    public ResponseEntity<List<DepoimentoResponse>> listarPendentes() { 
+        List<DepoimentoResponse> response = listarDepoimentosPendentesUseCase.execute() 
+            .stream() 
+            .map(DepoimentoResponse::from) .toList(); return ResponseEntity.ok(response); 
     }
 
     @PatchMapping("/{id}/aprovar")
