@@ -4,6 +4,7 @@ import br.com.erline.portfolio.application.usecase.AprovarDepoimentoUseCase;
 import br.com.erline.portfolio.application.usecase.CriarDepoimentoUseCase;
 import br.com.erline.portfolio.application.security.SenhaHasher;
 import br.com.erline.portfolio.application.usecase.CriarUsuarioUseCase;
+import br.com.erline.portfolio.application.usecase.ListarDepoimentosPendentesUseCase;
 import br.com.erline.portfolio.application.usecase.ListarDepoimentosUseCase;
 import br.com.erline.portfolio.application.usecase.RejeitarDepoimentoUseCase;
 import br.com.erline.portfolio.domain.repository.DepoimentoRepository;
@@ -16,36 +17,42 @@ public class UseCaseConfig {
 
     @Bean
     public CriarDepoimentoUseCase criarDepoimentoUseCase(
-            DepoimentoRepository repository
+        DepoimentoRepository repository
     ) {
         return new CriarDepoimentoUseCase(repository);
     }
 
     @Bean
     public ListarDepoimentosUseCase listarDepoimentosUseCase(
-            DepoimentoRepository repository
+        DepoimentoRepository repository
     ) {
         return new ListarDepoimentosUseCase(repository);
     }
 
+    @Bean public ListarDepoimentosPendentesUseCase listarDepoimentosPendentesUseCase( 
+        DepoimentoRepository repository 
+    ) { 
+        return new ListarDepoimentosPendentesUseCase(repository); 
+    }
+
     @Bean
     public AprovarDepoimentoUseCase aprovarDepoimentoUseCase(
-            DepoimentoRepository repository
+        DepoimentoRepository repository
     ) {
         return new AprovarDepoimentoUseCase(repository);
     }
 
     @Bean
     public RejeitarDepoimentoUseCase rejeitarDepoimentoUseCase(
-            DepoimentoRepository repository
+        DepoimentoRepository repository
     ) {
         return new RejeitarDepoimentoUseCase(repository);
     }
 
     @Bean
     public CriarUsuarioUseCase criarUsuarioUseCase(
-            UsuarioRepository repository,
-            SenhaHasher senhaHasher
+        UsuarioRepository repository,
+        SenhaHasher senhaHasher
     ) {
         return new CriarUsuarioUseCase(repository, senhaHasher);
     }
