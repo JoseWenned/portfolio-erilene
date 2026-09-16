@@ -54,6 +54,11 @@ public class SecurityConfig {
                         )
                         .permitAll()
                         .requestMatchers(
+                                HttpMethod.GET,
+                                "/uploads/depoimentos/**"
+                        )
+                        .permitAll()
+                        .requestMatchers(
                                 HttpMethod.POST,
                                 "/api/usuarios"
                         )
